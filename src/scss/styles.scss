@@ -1,0 +1,20 @@
+// Import all of Bootstrap's CSS
+@import "~bootstrap/scss/bootstrap";
+
+$grey: rgba(240,240,255,1);
+
+// Structure
+#imagePreview {
+    
+    max-width:75%;
+    aspect-ratio: 1 / 1;
+    background-color: #f6f6f6;
+    border-radius:1rem;
+    padding:0;
+    
+}
+
+.form-group {
+    padding:2rem;
+    border-radius:1rem;
+}
