@@ -17,22 +17,20 @@ import * as bootstrap from 'bootstrap';
     
 
     const imagePreview = document.getElementById("imagePreview");
+    const imagePreviewFrame = document.getElementById("imagePreviewFrame");
     const dimensionsWidth = document.getElementById("width");
     const dimensionsHeight = document.getElementById("height");
     const imagePreviewBtn = document.getElementById("imagePreviewBtn");
 
 // Functions
 
-    function resizePreview(w,h) {
+    function resizePreview(w=1080,h=1080) {
 
         if (w && h) {
 
-            imagePreview.style.setProperty("aspect-ratio",w+' / '+h);
-            if (h>w) {
-                imagePreview.style.setProperty("max-width",(75*(w/h))+'%');
-            } else {
-                imagePreview.style.setProperty("max-width",(75)+'%')
-            }
+            imagePreview.setAttribute("width",w);
+            imagePreview.setAttribute("height",h);
+            scalePreview(w,h);
 
         } else {
 
@@ -41,6 +39,25 @@ import * as bootstrap from 'bootstrap';
         }
 
         resetDownload();
+        
+
+    }
+
+    function scalePreview(w,h) {
+
+        let scale = imagePreview.getAttribute("data-scale") ?? 1;
+        console.log("Starting Scale: "+scale);
+
+        imagePreviewFrame.style.setProperty("width",w+"px");
+        imagePreviewFrame.style.setProperty("height",h+"px");
+
+        const scaleFactor = 1/Math.max(w/imagePreviewFrame.getBoundingClientRect().width,h/imagePreviewFrame.getBoundingClientRect().height)
+
+        imagePreviewFrame.style.setProperty("width",w*scaleFactor+"px");
+        imagePreviewFrame.style.setProperty("height",h*scaleFactor+"px");
+        
+        imagePreview.style.setProperty("transform","scale("+scaleFactor+")");
+
 
     }
 
@@ -168,3 +185,5 @@ import * as bootstrap from 'bootstrap';
     imagePreviewBtn.addEventListener('click',()=>{renderImage()});
 
 // Script
+
+    resizePreview();
