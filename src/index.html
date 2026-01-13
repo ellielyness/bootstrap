@@ -3,91 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap w/ Vite</title>
+    <title>Lorem Ipsum</title>
 </head>
 <body>
-
-    <div class="container-fluid bg-opacity-10 bg-dark">
-        <div class="row">
-
-            <div id="sidebar" class="col-md-6 col-12 bg-light d-flex flex-column justify-content-center">
-
-                <div class="col-10 offset-1">
-                    <h1 class="display-1">Image Tools</h1>
-                </div>
-
-                <div class="col-10 offset-1">
-                    <form>
-                        <label for="template">Select Template</label>
-                        <select class="form-select" id="template">
-                            <option>Image Treatment</option>
-                        </select>
-                    </form>
-                </div>
-
-                <div class="row py-3">
-                    <div class="col-10 offset-1">
-
-                        <div id="imgTreatmentForm" class="form-group bg-white border border-dark-subtle">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="imgTreatmentUrl">URL</label>
-                                    <input id="imgTreatmentUrl" class="form-control" name="imgTreatmentUrl" type="text">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="imgTreatmentSelect">Select Filter</label>
-                                    <select class="form-select" id="imgTreatmentSelect" name="imgTreatmentSelect">
-                                        <option value="dark">Dark</option>
-                                        <option value="light">Light</option>
-                                        <option value="none">None</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="form-check-label" for="imgTreatmentLogoEnabled">Enable Logo?</label>
-                                    <input id="imgTreatmentLogoEnabled" name="imgTreatmentLogoEnabled" type="checkbox" type="checkbox" class="form-check-input" value="false">
-                                    
-                                </div>
-                                
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-                
-            </div>
-
-            <div id="preview" class="col-md-6 col-12 vh-100 d-flex flex-column justify-content-center">
-
-                <div class="row">
-                    <div id="imagePreviewFrame" class="mx-auto" data-x="0">
-                        <iframe width="1080" height="1080" id="imagePreview" >
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="row">
-
-                    <div class="w-75 mx-auto my-3">
-
-                        <div class="input-group">
-                            <span class="input-group-text col-3">Dimensions (px)</span>
-                            <input id="width" type="number" aria-label="width" placeholder="1080" class="form-control col-3">
-                            <input id="height" type="number" aria-label="height" placeholder="1080" class="form-control col-3">
-                            <a id="imagePreviewBtn" class="btn btn-dark col-3">Render</a>
-                        </div>
-
-                    </div>
-
-                    
-
-                </div>
-
-                
-                
-            </div>
-
-        </div>
-    </div>
 
     <!-- JS Import-->
     <script type="module" src="./js/main.js"></script>
