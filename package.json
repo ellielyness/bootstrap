@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "sass": "^1.97.2",
+    "vite": "^6.4.1"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "popperjs-core": "^1.0.0"
+  },
+  "scripts": {
+    "start": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
+  }
+}

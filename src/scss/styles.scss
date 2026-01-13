@@ -1,25 +1,2 @@
 // Import all of Bootstrap's CSS
 @import "~bootstrap/scss/bootstrap";
-
-$grey: rgba(240,240,255,1);
-
-// Structure
-#imagePreviewFrame {
-    
-    max-width:75%;
-    max-height:600px;
-    background-color: #f6f6f6;
-    border-radius:1rem;
-    padding:0;
-    clip-path: border-box;
-    
-}
-
-#imagePreview {
-    transform-origin: left top;
-}
-
-.form-group {
-    padding:2rem;
-    border-radius:1rem;
-}
